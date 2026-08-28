@@ -103,5 +103,13 @@ export const knownHosts = [
     "yougotrickrolled.com",
     "zeroboard.com/16979949#0",
     "zideo.nl/index.php?option=com_podfeed&zideo=6c4971596d513d3d&playzideo=6c344f596d31593d&Itemid=",
-    "https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html"
+    "https://only-fans.uk/",
+    "https://r.mtdv.me/",
+    "https://rroll.derlin.ch",
+    "https://spotify-rickroll.vercel.app/",
+    "https://www.temporary-url.com/",
+    "https://www.latlmes.com/breaking/news-rickroll-generator-1",
+    "https://streamable.com/lf027o",
+    "https://prank-website.rafidhoda.repl.co/",
+    "https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html",
 ];

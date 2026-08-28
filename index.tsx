@@ -72,7 +72,27 @@ function isPotentialRickroll(url: string): boolean {
             }
         }
 
-        if (knownHosts.includes(hostname)) {
+        const candidatePath = `${parsedUrl.pathname.replace(/\/$/, "")}${parsedUrl.search}${parsedUrl.hash}`;
+        const matchesKnownHost = knownHosts.some((knownHost) => {
+            try {
+                const knownUrl = new URL(
+                    knownHost.includes("://")
+                        ? knownHost
+                        : `https://${knownHost}`
+                );
+                const knownHostname = knownUrl.hostname.replace("www.", "");
+                const knownPath = `${knownUrl.pathname.replace(/\/$/, "")}${knownUrl.search}${knownUrl.hash}`;
+
+                return (
+                    hostname === knownHostname &&
+                    (knownPath === "" || candidatePath === knownPath)
+                );
+            } catch {
+                return false;
+            }
+        });
+
+        if (matchesKnownHost) {
             return true;
         }
     } catch (e) {
