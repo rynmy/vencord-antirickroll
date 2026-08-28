@@ -47,3 +47,10 @@ test("matches an exact path-specific known URL without blocking the whole host",
     );
     assert.equal(isPotentialRickroll("https://discord.com/channels/@me"), false);
 });
+
+test("matches the contributed bit.ly redirect without blocking other bit.ly links", () => {
+    const isPotentialRickroll = loadMatcher();
+
+    assert.equal(isPotentialRickroll("https://bit.ly/3vahOeT"), true);
+    assert.equal(isPotentialRickroll("https://bit.ly/not-a-rickroll"), false);
+});

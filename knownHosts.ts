@@ -112,4 +112,5 @@ export const knownHosts = [
     "https://streamable.com/lf027o",
     "https://prank-website.rafidhoda.repl.co/",
     "https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html",
+    "bit.ly/3vahOeT",
 ];
